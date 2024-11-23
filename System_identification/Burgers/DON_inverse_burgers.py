@@ -209,36 +209,6 @@ plot_sample(ic_and_nu_test, u_sol_test, test_sample_index, "Test Sample")
 
 """# Data generator class"""
 
-# # Data Generator
-# class DataGenerator(data.Dataset):
-#     def __init__(self, u, y, s, nu, batch_size, gen_key):
-#         self.u = u
-#         self.y = y
-#         self.s = s
-#         self.nu = nu
-#         self.N = nu.shape[0]
-#         self.batch_size = batch_size
-#         self.key = gen_key
-
-#     def __getitem__(self, index):
-#         """Generate one batch of data"""
-#         self.key, subkey = jax.random.split(self.key)
-#         inputs, outputs, nu = self.__data_generation(subkey)
-#         return inputs, outputs, nu
-
-#     @partial(jax.jit, static_argnums=(0,))
-#     def __data_generation(self, key_i):
-#         """Generates data containing batch_size samples"""
-#         idx = jax.random.choice(key_i, self.N, (self.batch_size,), replace=False)
-#         s = self.s[idx, :]
-#         y = self.y[:, :]
-#         u = self.u[idx, :]
-#         nu = self.nu[idx]
-#         # Construct batch
-#         inputs = (u, y)
-#         outputs = s
-#         return inputs, outputs, nu
-
 # Data Generator
 class DataGenerator(data.Dataset):
     def __init__(self, u, y, s, nu, ics, batch_size, gen_key):
@@ -406,7 +376,6 @@ print("y_data_train: ", str(y_data_train.shape))  # Expected: (N_train, 300, 2)
 print("nu_data_train: ", str(nu_data_train.shape))  # Expected: (N_train,)
 
 # Residual data
-# key_res = jax.random.split(keys[0], n_train)
 u_res_train, y_res_train, s_res_train, nu_res_train = (jax.vmap(generate_one_res_training_data,
                                                  in_axes=(0, 0, None, None, None))
                                          (nu_train, u_sol_train, key, p_data_train, p_res_train))
@@ -427,7 +396,6 @@ print("y_ics_train: ", str(y_ics_train.shape))  # Expected: (N_train, 101, 2)
 print("nu_ics_train: ", str(nu_ics_train.shape))  # Expected: (N_train, )
 
 # BCs data
-# key_bcs = jax.random.split(keys[0], n_train)
 u_bcs_train, y_bcs_train, s_bcs_train, nu_bcs_train = (jax.vmap(generate_one_bcs_training_data,
                                                                in_axes=(0, 0, None))
                                                     (nu_train, u_sol_train, p_data_train))
@@ -769,11 +737,6 @@ def visualize_show(model_fn, params, result_dir, epoch, data_output, u_sol_test,
 # Initialize an empty list to store MSE values
 mse_values = []
 
-# # Load the best model parameters
-# best_params = load_model_params(result_dir, filename='model_params_best.pkl')
-# print("Loaded best model parameters")
-
-
 # Loop over every 20th index to visualize and calculate R²
 for i in range(u_sol_test.shape[0]):
     if i % 100 == 0:
@@ -811,9 +774,6 @@ def loss_ics(model_fn, params, ics_batch):
     t = y[1,:, 1] # pick any sample all are same
     x = y[1,:, 0]
     s_pred = apply_net(model_fn, params, u_data, t, x)
-
-#     u_ic = jnp.tile(u_ic[None, :], (s_pred.shape[0], 1))
-#     u_ic = jnp.tile(u_ic[None, :], (s_pred.shape[0], 1))
 
     loss_ic = mse(u_ic, s_pred)
 
@@ -863,11 +823,6 @@ def loss_res(model_fn_nu, model_fn, params_nu, params_loaded, res_batch):
 
 
     _, s_xx = jax.jvp(lambda t: jax.jvp(lambda t: f(t, x), (t,), (jnp.ones_like(t),))[1], (t,), (jnp.ones_like(t),))
-#     _, s_x = jax.jvp(lambda x: f(t, x), (x,), (jnp.ones_like(x),)) # changed f(t, x) to f(x, t)
-#     _, s_t = jax.jvp(lambda t: f(t, x), (t,), (jnp.ones_like(t),))
-
-
-#     _, s_xx = jax.jvp(lambda x: jax.jvp(lambda t: f(t, x), (x,), (jnp.ones_like(x),))[1], (x,), (jnp.ones_like(x),))
 
 
     nu_pred = nu_pred.reshape(-1,1)
@@ -895,8 +850,6 @@ def loss_data(model_fn, params, data_batch):
 
 def loss_fn(model_fn_nu, model_fn, params, ics_batch, bcs_batch, res_batch, data_batch):
     params_loaded, params_nu = params
-#     loss_ics_i = loss_ics(model_fn, params_loaded, ics_batch, ic_and_nu_train[1, :-1])
-#     loss_ics_i = loss_ics(model_fn, params_loaded, ics_batch, ic_and_nu_train[:, :-1])
     loss_ics_i = loss_ics(model_fn, params_loaded, ics_batch)
     loss_bcs_i = loss_bcs(model_fn, params_loaded, bcs_batch)
     loss_res_i = loss_res(model_fn_nu, model_fn, params_nu, params_loaded, res_batch)
@@ -906,11 +859,6 @@ def loss_fn(model_fn_nu, model_fn, params, ics_batch, bcs_batch, res_batch, data
 
     return loss_value
 
-# loss_res(model_fn_nu, model_fn, params_nu, params_loaded, res_batch)
-
-"""# Initialize model"""
-
-# branch_nu_layers = [64, 64, 64]
 
 """# set the model"""
 
@@ -938,8 +886,6 @@ print('--- model_summary ---')
 
 # model function
 model_fn_nu = jax.jit(model_nu.apply)
-
-"""# Test error function"""
 
 """# Test error function"""
 
@@ -1039,13 +985,11 @@ for it in range(epochs):
         # def loss_res(model_fn_nu, model_fn, params_nu, params_loaded, res_batch):
         params_loaded, params_nu = params
         loss = loss_fn(model_fn_nu, model_fn, params, ics_batch, bcs_batch, res_batch, data_batch)
-#         loss_ics_value = loss_ics(model_fn, params_loaded, ics_batch, ic_and_nu_train[:, :-1])
         loss_ics_value = loss_ics(model_fn, params_loaded, ics_batch)
         loss_bcs_value = loss_bcs(model_fn, params_loaded, bcs_batch)
         loss_res_value = loss_res(model_fn_nu, model_fn, params_nu, params_loaded, res_batch)
         loss_data_value = loss_data(model_fn, params_loaded, data_batch)
 
-#         loss_test, rel_error = loss_test_l2_error_nu(model_fn_nu, params_nu, data_output, u_sol_test, nu_test, return_data=False)
         loss_test, rel_error = loss_test_l2_error(model_fn, params_loaded, data_output, u_sol_test, return_data=False)
         if loss_test < best_test_mse:
             best_test_mse = loss_test
@@ -1083,10 +1027,9 @@ with open(log_file, 'a') as f:
 """# Loss plots"""
 
 # Set the result directory
-# result_dir = "/kaggle/input/csv-log"
 
 # Read the CSV file
-csv_file = os.path.join(result_dir, "log.csv")  # Assuming the file is named "log.csv"
+csv_file = os.path.join(result_dir, "log.csv")
 df = pd.read_csv(csv_file)
 
 # Create the figure with two subplots side by side
@@ -1188,8 +1131,6 @@ def visualize_show(model_fn_nu, model_fn, params, result_dir, epoch, data_output
     # Adjusting layout for more vertical space
     plt.subplots_adjust(left=0.1, bottom=0.1, right=0.9, top=0.7, wspace=0.4, hspace=0.1)
 
-
-#     print(output_data[idx,:,:].shape)
     # Plot Exact u over time using pcolor
     ax = fig.add_subplot(1, 3, 1)
     plt.pcolor(x_test, t_test, s_test.T, cmap='jet', shading='auto')
@@ -1227,9 +1168,6 @@ def visualize_show(model_fn_nu, model_fn, params, result_dir, epoch, data_output
     else:
         plt.suptitle(f'Train L2: {l2_error:.3e}, R2: {r2_value}', y=1.05)
 
-    # Show or save the plot
-#     if save:
-#         plt.savefig(os.path.join(result_dir, f'Test_Sample_{idx+1}.pdf'))
     plt.show()
     plt.close()
     print(colored('#' * 230, 'green'))
@@ -1265,7 +1203,6 @@ params_loaded, params_nu = best_params
 loss_test, l2_error = loss_test_l2_error(model_fn, params_loaded, data_output, u_sol_test, return_data=False)
 
 # Calculate and print the mean MSE over all test samples
-# mean_mse = jnp.mean(jnp.array(mse_values))
 print(f"Mean MSE over test samples: {loss_test:.3e}")
 
 """# Test visualization"""
@@ -1419,7 +1356,6 @@ mse_values = []
 
 # Load the best model parameters
 filename='model_params_best.pkl'
-# filename='model_params.pkl'
 
 
 load_path = os.path.join(result_dir, filename)
