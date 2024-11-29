@@ -37,6 +37,7 @@ The dataset for all codes on this repository are available [here](https://livejo
   - **Burgers**:
     - `training_solution_operator.py`: Implements step 1 of the framework.
     - `DON_inverse_burgers.py`: Implements step 2 of the framework.
+    - Wandb/`burgers_inverse_wandb.py`: Example code for hyperparameter tuning.
   - **Reaction Diffusion**:
     - `training_solution_operator.py`: Implements step 1 of the framework.
     - `DON_inverse_reactionDiffusion.py`: Implements step 2 of the framework.
