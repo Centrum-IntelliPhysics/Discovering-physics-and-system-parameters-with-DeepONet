@@ -6,7 +6,7 @@ This repository provides two innovative neural operator frameworks for solving c
 
 1. **Hidden Physics Discovery**: Combines DeepONet and physics-informed neural networks to map sparse data to underlying physics, enabling the discovery of governing equations.
 
-![Hidden Physics Framework](https://livejohnshopkins-my.sharepoint.com/:b:/g/personal/droysar1_jh_edu/EdRrvRdlq2RMsoZhbccIlt0BfW5vr-qaV8kmzjID5am3rg?e=SpbcUO)
+![Hidden Physics Framework](https://livejohnshopkins-my.sharepoint.com/personal/droysar1_jh_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fdroysar1%5Fjh%5Fedu%2FDocuments%2FGithub%5Fimage%5Fvideo%2FDON%5Finverse%2FFramework%2Farch%5Fdeeponet%5Fhidden%5Fphysics%5Fpage%2D0001%2Ejpg&parent=%2Fpersonal%2Fdroysar1%5Fjh%5Fedu%2FDocuments%2FGithub%5Fimage%5Fvideo%2FDON%5Finverse%2FFramework&ga=1)
 
 4. **System Parameter Identification**: Uses a pre-trained DeepONet to initialize a physics-constrained inverse model for precise parameter estimation.
 
