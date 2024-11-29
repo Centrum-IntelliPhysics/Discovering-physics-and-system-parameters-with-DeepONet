@@ -19,7 +19,9 @@ This repository provides two innovative neural operator frameworks for solving c
   - **Hidden Physics Discovery**: L2 error of O(10⁻²)
   - **Parameter Identification**: Absolute error of O(10⁻³)
 
-Explore how these frameworks advance scientific discovery with minimal data.
+These results underscore the frameworks’ robustness, efficiency, and potential for solving complex scientific problems with minimal observational data.
+
+## Dataset:
 
 The dataset for all codes on this repository are available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
 
