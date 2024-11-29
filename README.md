@@ -25,7 +25,24 @@ These results underscore the frameworks’ robustness, efficiency, and potential
 
 The dataset for all codes on this repository are available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
 
-## For the reference_darcy_PI_DeepONet:
- * PI_DeepONet_Darcy_without_Data_sampling_fixed_RUN.py  => model trained without data apart from BCs (zero value), collocation points are fixed for the sample and do not change while gradient step
- * PI_DeepONet_Darcy_without_Data_sampling_varied_RUN.py => model trained without data apart from BCs (zero value), collocation points are randomly sampled during each gradient step.
- * Do not change the RANDOM_SEED in the codes
+## Repository Overview:
+
+- **Reference Folders**: This repository contains two reference folders: `Reference_PI_DeepONet_Burgers_inverse` and `reference_darcy_PI_DeepONet`.
+  - **Reference_PI_DeepONet_Burgers_inverse**: Contains the `inverse-burgers-nu-1000.ipynb` notebook, which provides a code reference for the inverse DeepONet framework.
+  - **reference_darcy_PI_DeepONet**: Contains two scripts:
+    - `PI_DeepONet_Darcy_without_Data_sampling_fixed_RUN.py`: Trains the model without data (apart from boundary conditions set to zero). The collocation points remain fixed for the sample and do not change during each gradient step.
+    - `PI_DeepONet_Darcy_without_Data_sampling_varied_RUN.py`: Trains the model without data (apart from boundary conditions set to zero). The collocation points are randomly sampled during each gradient step.
+
+- **System Identification Folder**: This folder contains scripts for the example problems.
+  - **Burgers**:
+    - `training_solution_operator.py`: Implements step 1 of the framework.
+    - `DON_inverse_burgers.py`: Implements step 2 of the framework.
+  - **Reaction Diffusion**:
+    - `training_solution_operator.py`: Implements step 1 of the framework.
+    - `DON_inverse_reactionDiffusion.py`: Implements step 2 of the framework.
+   
+- **Hidden physics Folder**: This folder contains scripts for the example problems.
+
+- **Important Note**: Do not change the `RANDOM_SEED` in the code.
+
+
