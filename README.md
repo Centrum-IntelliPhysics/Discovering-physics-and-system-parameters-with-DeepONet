@@ -1,6 +1,7 @@
 # Learning Hidden Physics and System Parameters with Deep Operator Networks
 
 Vijay Kag*, [Dibakar Roy Sarkar](https://scholar.google.com/citations?user=Sz4nHdYAAAAJ&hl=en)*, Birupaksha Pal and [Somdatta Goswami](https://scholar.google.com/citations?user=GaKrpSkAAAAJ&hl=en)
+
 *These authors have made equal contributions to this work.
 
 
