@@ -2,6 +2,8 @@
 
 Vijay Kag*, [Dibakar Roy Sarkar](https://scholar.google.com/citations?user=Sz4nHdYAAAAJ&hl=en)*, Birupaksha Pal and [Somdatta Goswami](https://scholar.google.com/citations?user=GaKrpSkAAAAJ&hl=en)
 
+* These authors have made equal contributions to this work.
+
 This repository provides two innovative neural operator frameworks for solving challenging scientific problems with sparse observational data:
 
 1. **Hidden Physics Discovery**: Combines DeepONet and physics-informed neural networks to map sparse data to underlying physics, enabling the discovery of governing equations.
