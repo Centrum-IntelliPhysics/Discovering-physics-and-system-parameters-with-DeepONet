@@ -8,7 +8,7 @@ This repository provides two innovative neural operator frameworks for solving c
 
 ![arch_deeponet_hidden_physics_page-0001](https://github.com/user-attachments/assets/389b5671-6e51-46cc-bce3-a737ddf3dd11)
 
-4. **System Parameter Identification**: Uses a pre-trained DeepONet to initialize a physics-constrained inverse model for precise parameter estimation.
+2. **System Parameter Identification**: Uses a pre-trained DeepONet to initialize a physics-constrained inverse model for precise parameter estimation.
 
 ![Inverse_DON_framework_v3_page-0001](https://github.com/user-attachments/assets/f142d522-fd24-40c8-9e20-4323aea00ac8)
 
