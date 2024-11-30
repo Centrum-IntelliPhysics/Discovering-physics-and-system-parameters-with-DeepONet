@@ -23,16 +23,12 @@ These results underscore the frameworks’ robustness, efficiency, and potential
 
 ## Dataset:
 
-The dataset for all codes on this repository are available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
+The dataset for all codes on this repository is available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
 
 ## Repository Overview:
 
 - **Reference Folders**: This repository contains two reference folders: `Reference_PI_DeepONet_Burgers_inverse` and `reference_darcy_PI_DeepONet`.
   - **Reference_PI_DeepONet_Burgers_inverse**: Contains the `inverse-burgers-nu-1000.ipynb` notebook, which provides a code reference for the inverse DeepONet framework.
-  - **reference_darcy_PI_DeepONet**: Contains two scripts:
-    - `PI_DeepONet_Darcy_without_Data_sampling_fixed_RUN.py`: Trains the model without data (apart from boundary conditions set to zero). The collocation points remain fixed for the sample and do not change during each gradient step.
-    - `PI_DeepONet_Darcy_without_Data_sampling_varied_RUN.py`: Trains the model without data (apart from boundary conditions set to zero). The collocation points are randomly sampled during each gradient step.
-
 - **System Identification Folder**: This folder contains scripts for the example problems.
   - **Burgers**:
     - `training_solution_operator.py`: Implements step 1 of the framework.
