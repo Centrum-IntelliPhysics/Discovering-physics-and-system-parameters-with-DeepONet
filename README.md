@@ -29,6 +29,7 @@ These results underscore the frameworks’ robustness, efficiency, and potential
 The dataset for all codes on this repository is available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
 
 ## Repository Overview:
+- **Data generation Folder**: This folder contains scripts for generating data for the example problems.
 - **System Identification Folder**: This folder contains scripts for the example problems.
   - **Burgers**:
     - `training_solution_operator.py`: Implements step 1 of the framework.
