@@ -30,7 +30,7 @@ The dataset for all codes on this repository is available [here](https://livejoh
 
 ## Presentation:
 
-A recorded presentation is available [here.]([https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/Ele6tiGxnuxFnQe1B6E6g3kB7WHMwPyJs7W5ZHF1Qso_EQ?e=2S5kZP)).
+A recorded presentation is available [here]([https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/Ele6tiGxnuxFnQe1B6E6g3kB7WHMwPyJs7W5ZHF1Qso_EQ?e=2S5kZP)).
 
 ## Repository Overview:
 - **Data generation Folder**: This folder contains scripts that generate example problem data.
