@@ -38,6 +38,9 @@ The dataset for all codes on this repository is available [here](https://livejoh
   - **Reaction Diffusion**:
     - `training_solution_operator.py`: Implements step 1 of the framework.
     - `DON_inverse_reactionDiffusion.py`: Implements step 2 of the framework.
+  - **2D Heat L**:
+    - `inv_operator_train.ipynb`: Implements step 2 of the framework. 
+    - `solution_operator_train.ipynb`: Implements step 2 of the framework.
    
 - **Hidden physics Folder**: This folder contains scripts for the example problems.
 
