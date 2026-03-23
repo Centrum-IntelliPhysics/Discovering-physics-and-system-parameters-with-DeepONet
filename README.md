@@ -24,6 +24,10 @@ This repository provides two innovative neural operator frameworks for solving c
 
 These results underscore the frameworks’ robustness, efficiency, and potential for solving complex scientific problems with minimal observational data.
 
+## Paper:
+
+The preprint of our paper is available on arXiv: [Learning Hidden Physics and System Parameters with Deep Operator Networks](https://arxiv.org/abs/2412.05133).
+
 ## Dataset:
 
 The dataset for all codes on this repository is available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
