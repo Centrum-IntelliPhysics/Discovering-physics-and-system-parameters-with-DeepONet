@@ -1,6 +1,10 @@
 # Learning Hidden Physics and System Parameters with Deep Operator Networks
 
-[Dibakar Roy Sarkar](https://scholar.google.com/citations?user=Sz4nHdYAAAAJ&hl=en)*, Vijay Kag *, Birupaksha Pal and [Somdatta Goswami](https://scholar.google.com/citations?user=GaKrpSkAAAAJ&hl=en)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![DOI: 10.1016/j.cma.2026.118926](https://img.shields.io/badge/DOI-10.1016%2Fj.cma.2026.118926-blue)](https://doi.org/10.1016/j.cma.2026.118926)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-green.svg)](https://github.com/Centrum-IntelliPhysics/Discovering-physics-and-system-parameters-with-DeepONet/releases/tag/v1.0.0)
+
+[Dibakar Roy Sarkar](https://scholar.google.com/citations?user=Sz4nHdYAAAAJ&hl=en) <sup>[<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16">](https://orcid.org/0009-0001-4543-4473)</sup>*, Vijay Kag <sup>[<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16">](https://orcid.org/0000-0003-4657-677X)</sup>*, Birupaksha Pal <sup>[<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16">](https://orcid.org/0000-0002-3609-4972)</sup> and [Somdatta Goswami](https://scholar.google.com/citations?user=GaKrpSkAAAAJ&hl=en) <sup>[<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="ORCID" width="16">](https://orcid.org/0000-0002-8255-9080)</sup>
 
 *These authors have made equal contributions to this work.
 
@@ -26,7 +30,12 @@ These results underscore the frameworks’ robustness, efficiency, and potential
 
 ## Paper:
 
-The preprint of our paper is available on arXiv: [Learning Hidden Physics and System Parameters with Deep Operator Networks](https://arxiv.org/abs/2412.05133).
+Our work has been published in **Computer Methods in Applied Mechanics and Engineering**:
+**Title**: Learning hidden physics and system parameters with deep operator networks
+**DOI**: [10.1016/j.cma.2026.118926](https://doi.org/10.1016/j.cma.2026.118926)
+**Official Article Link**: [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0045782526001994?dgcid=author)
+
+The preprint is also available on arXiv: [Learning Hidden Physics and System Parameters with Deep Operator Networks](https://arxiv.org/abs/2412.05133).
 
 ## Dataset:
 
@@ -69,4 +78,10 @@ A recorded presentation is available [here.](https://livejohnshopkins-my.sharepo
 
 - **Important Note**: Do not change the `RANDOM_SEED` in the code.
 
+## Contributing
 
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) guidelines for instructions on opening issues or submitting pull requests.
+
+## License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.

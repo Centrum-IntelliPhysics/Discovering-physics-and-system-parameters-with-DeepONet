@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software or the associated dataset, please cite it as below."
+authors:
+- family-names: "Roy Sarkar"
+  given-names: "Dibakar"
+  orcid: "https://orcid.org/0009-0001-4543-4473"
+- family-names: "Kag"
+  given-names: "Vijay"
+  orcid: "https://orcid.org/0000-0003-4657-677X"
+- family-names: "Pal"
+  given-names: "Birupaksha"
+  orcid: "https://orcid.org/0000-0002-3609-4972"
+- family-names: "Goswami"
+  given-names: "Somdatta"
+  orcid: "https://orcid.org/0000-0002-8255-9080"
+title: "Learning hidden physics and system parameters with deep operator networks"
+doi: 10.1016/j.cma.2026.118926
+date-released: 2026-03-28
+url: "https://github.com/Centrum-IntelliPhysics/Discovering-physics-and-system-parameters-with-DeepONet"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Roy Sarkar"
+    given-names: "Dibakar"
+  - family-names: "Kag"
+    given-names: "Vijay"
+  - family-names: "Pal"
+    given-names: "Birupaksha"
+  - family-names: "Goswami"
+    given-names: "Somdatta"
+  doi: "10.1016/j.cma.2026.118926"
+  journal: "Computer Methods in Applied Mechanics and Engineering"
+  title: "Learning hidden physics and system parameters with deep operator networks"
+  volume: 456
+  issue: 118926
+  year: 2026
