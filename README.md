@@ -37,6 +37,26 @@ Our work has been published in **Computer Methods in Applied Mechanics and Engin
 
 The preprint is also available on arXiv: [Learning Hidden Physics and System Parameters with Deep Operator Networks](https://arxiv.org/abs/2412.05133).
 
+## Citation
+
+If you use this work, please cite it as:
+
+```bibtex
+@article{ROYSARKAR2026118926,
+title = {Learning hidden physics and system parameters with deep operator networks},
+journal = {Computer Methods in Applied Mechanics and Engineering},
+volume = {456},
+pages = {118926},
+year = {2026},
+issn = {0045-7825},
+doi = {https://doi.org/10.1016/j.cma.2026.118926},
+url = {https://www.sciencedirect.com/science/article/pii/S0045782526001994},
+author = {Dibakar {Roy Sarkar} and Vijay Kag and Birupaksha Pal and Somdatta Goswami},
+keywords = {Physics-deficient equation, Deep operator network, System identification and generalization, Scientific machine learning, Inverse problem},
+abstract = {Discovering hidden physical laws and identifying governing system parameters from sparse observations are central challenges in computational science and engineering. Existing data-driven methods, such as physics-informed neural networks (PINNs) and sparse regression, are limited by their need for extensive retraining, sensitivity to noise, or inability to generalize across families of partial differential equations (PDEs). In this work, we introduce two complementary frameworks based on deep operator networks (DeepONet) to address these limitations. The first, termed the Deep Hidden Physics Operator (DHPO), extends hidden-physics modeling into the operator-learning paradigm, enabling the discovery of unknown PDE terms across diverse equation families by identifying the mapping of unknown physical operators. The second is a parameter identification framework that combines pretrained DeepONet with physics-informed inverse modeling to infer system parameters directly from sparse sensor data. We demonstrate the effectiveness of these approaches on benchmark problems, including the Reaction-Diffusion system, Burgers’ equation, the 2D Heat equation, and 2D Helmholtz equation. Across all cases, the proposed methods achieve high accuracy, with relative solution errors on the order of O(10−2) and parameter estimation errors on the order of O(10−3), even under limited and noisy observations. By uniting operator learning with physics-informed modeling, this work offers a unified and data-efficient framework for physics discovery and parameter identification, paving the way for robust inverse modeling in complex dynamical systems.}
+}
+```
+
 ## Dataset:
 
 The dataset for all codes on this repository is available [here](https://livejohnshopkins-my.sharepoint.com/:f:/g/personal/sgoswam4_jh_edu/EvZNjbT37dVFqr3uJxWa-FoByuDaPEMDlvtlTn-8QhlJdw?e=50q2lm).
